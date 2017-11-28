@@ -15,15 +15,21 @@ body {
   width: 80%;
   margin: 20px auto;
 }
+
 header {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
+h1, h2 {
+  font-family: 'Fredoka One', cursive;
+  font-weight: lighter;
+}
 ol {
   display: inline-block;
   justify-content: space-between;
 }
+
 img {
   border: white solid;
   width: 100px;
@@ -31,9 +37,34 @@ img {
   background-attachment: scroll;
   position: relative;
   animation-name: move;
-  animation-duration: 6s;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  z-index: -1;
 }
 @keyframes move {
   0% {left: 0px; top: 0px;}
-  100% {left: 800px; top: 200px;}
+  100% {left: 900px; top: 0px;}
+}
+
+table {
+  width: 100%;
+}
+
+table, th, td {
+  border: 1px solid black;
+  padding: 5px;
+  border-collapse: collapse;
+}
+.girl td {
+  border: 1px solid #fc02d2;
+}
+.boy td {
+  border: 1px solid green;
+}
+tr:nth-of-type(odd) {
+    background: grey;
+}
+
+tr:nth-of-type(even) {
+    background: white;
 }
